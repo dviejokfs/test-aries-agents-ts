@@ -1,0 +1,22 @@
+{
+  "name": "mediator-aries-js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start:agent1": "ts-node-dev ./src/agent1.ts",
+    "start:agent2": "ts-node-dev ./src/agent2.ts"
+  },
+  "dependencies": {
+    "@aries-framework/core": "^0.2.0-alpha.112",
+    "@aries-framework/node": "^0.2.0-alpha.112",
+    "@types/express": "^4.17.13",
+    "@types/uuid": "^8.3.4",
+    "@types/ws": "^8.5.3",
+    "express": "^4.18.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.3",
+    "uuid": "^8.3.2",
+    "ws": "^8.8.0"
+  }
+}
