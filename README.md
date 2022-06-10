@@ -14,3 +14,10 @@ yarn responder
 ```bash
 yarn responder
 ```
+
+
+## Send message
+
+```bash
+curl http://localhost:3003/message?message=testing
+```
