@@ -7,6 +7,7 @@ import { Lifecycle, scoped } from 'tsyringe'
 import { DummyRequestHandler, DummyResponseHandler } from './handlers'
 import { DummyState } from './repository'
 import { DummyService } from './services'
+import { DummyRequestMessage } from './messages'
 
 @scoped(Lifecycle.ContainerScoped)
 export class DummyModule {
@@ -32,9 +33,9 @@ export class DummyModule {
    * @param connection record of the target responder (must be active)
    * @returns created Dummy Record
    */
-  public async request(connectionId: string) {
+  public async request(message: DummyRequestMessage, connectionId: string) {
     const connection = await this.connectionService.getById(connectionId)
-    const { record, message: payload } = await this.dummyService.createRequest(connection)
+    const { record, message: payload } = await this.dummyService.createRequest(message, connection)
 
     await this.messageSender.sendMessage({ connection, payload })
 

@@ -28,9 +28,9 @@ export class DummyService {
    * @returns Object containing dummy request message and associated dummy record
    *
    */
-  public async createRequest(connectionRecord: ConnectionRecord) {
+  public async createRequest(message: DummyRequestMessage, connectionRecord: ConnectionRecord) {
     // Create message
-    const message = new DummyRequestMessage({})
+    // const message = new DummyRequestMessage({})
 
     // Create record
     const record = new DummyRecord({

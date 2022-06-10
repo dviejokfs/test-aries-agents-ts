@@ -5,7 +5,9 @@ export interface DummyRequestMessageOptions {
 }
 
 export class DummyRequestMessage extends AgentMessage {
-  foo = "aaaa"
+  // trademarkId: string;
+  // classNumbers: string[]
+  message: string
   public constructor(options: DummyRequestMessageOptions) {
     super()
 
