@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start:agent1": "ts-node-dev ./src/agent1.ts",
-    "start:agent2": "ts-node-dev ./src/agent2.ts"
+    "requester": "ts-node-dev ./src/requester.ts",
+    "responder": "ts-node-dev ./src/responder.ts"
   },
   "dependencies": {
     "@aries-framework/core": "^0.2.0-alpha.112",
